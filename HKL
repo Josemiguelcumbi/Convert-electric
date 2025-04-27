@@ -1,0 +1,8 @@
+function converter() { const valor = parseFloat(document.getElementById('valor').value); const unidade = document.getElementById('unidade').value; const escalaOrigem = parseFloat(document.getElementById('escalaOrigem').value); const escalaDestino = parseFloat(document.getElementById('escalaDestino').value);
+
+if (isNaN(valor)) { document.getElementById('resultado').innerHTML = "Por favor, insira um valor válido."; return; }
+
+const valorConvertido = (valor * escalaOrigem) / escalaDestino;
+
+document.getElementById('resultado').innerHTML = ${valor} ${unidade} convertido é:<br> <strong>${valorConvertido.toFixed(6)} ${unidade}</strong>; }
+
